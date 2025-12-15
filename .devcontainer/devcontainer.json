@@ -1,0 +1,29 @@
+{
+    "name": "Cloud Native Go 1.19.9 Dev Environment",
+    "dockerFile": "../Dockerfile.dev",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/app,type=bind",
+    "workspaceFolder": "/app",
+    "forwardPorts": [8080],
+
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "golang.go",
+                "ms-azuretools.vscode-docker"
+            ],
+            "settings": {
+                "go.toolsManagement.checkForToolsUpdate": "off",
+                "go.toolsManagement.autoUpdate": false,
+                "go.toolsManagement.go": "go1.19"
+            }
+        }
+    },
+
+    "remoteEnv": {
+        "PORT": "8080",
+        "ECHO_DEBUG": "true",
+        "POKEMONAPI_BASE_URL": "https://pokeapi.co/api/v2"
+    },
+
+    "postCreateCommand": "which gopls && go mod tidy"
+}

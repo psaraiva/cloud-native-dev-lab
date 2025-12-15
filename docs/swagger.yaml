@@ -1,0 +1,55 @@
+basePath: /
+definitions:
+  main.AnswerModel:
+    properties:
+      pokemon_answer:
+        type: string
+      pokemon_id:
+        type: string
+    type: object
+info:
+  contact:
+    name: Pedro Saraiva
+    url: https://github.com/psaraiva/cloud-native-dev-lab/issues
+  description: This lab aims to create a secure environment for legacy Go applications,
+    in this case version 1.19.
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: Cloud Native Go 1.19 Lab
+  version: "1.0"
+paths:
+  /:
+    get:
+      produces:
+      - text/plain
+      responses:
+        "200":
+          description: greetings
+          schema:
+            type: string
+      summary: Wellcome Message
+      tags:
+      - Status
+  /pokemon/{name}:
+    get:
+      description: Busca um Pokémon pela URL e retorna informações processadas pelo
+        serviço.
+      parameters:
+      - description: 'Nome do Pokémon (ex: ditto)'
+        in: path
+        name: name
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/main.AnswerModel'
+      summary: Detalhes do Pokémon
+      tags:
+      - Data
+swagger: "2.0"

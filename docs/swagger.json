@@ -1,0 +1,81 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "This lab aims to create a secure environment for legacy Go applications, in this case version 1.19.",
+        "title": "Cloud Native Go 1.19 Lab",
+        "termsOfService": "http://swagger.io/terms/",
+        "contact": {
+            "name": "Pedro Saraiva",
+            "url": "https://github.com/psaraiva/cloud-native-dev-lab/issues"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0"
+    },
+    "basePath": "/",
+    "paths": {
+        "/": {
+            "get": {
+                "produces": [
+                    "text/plain"
+                ],
+                "tags": [
+                    "Status"
+                ],
+                "summary": "Wellcome Message",
+                "responses": {
+                    "200": {
+                        "description": "greetings",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/pokemon/{name}": {
+            "get": {
+                "description": "Busca um Pokémon pela URL e retorna informações processadas pelo serviço.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Data"
+                ],
+                "summary": "Detalhes do Pokémon",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Nome do Pokémon (ex: ditto)",
+                        "name": "name",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/main.AnswerModel"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "main.AnswerModel": {
+            "type": "object",
+            "properties": {
+                "pokemon_answer": {
+                    "type": "string"
+                },
+                "pokemon_id": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
