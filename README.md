@@ -1,6 +1,6 @@
 # Combating Technical Debt: Immediate Setup & Productivity with Dev Containers in Go
 
-[![Bandeira do Brasil](https://raw.githubusercontent.com/hatemhosny/country-flags/master/png/Brazil.png)](./README_pt_br.md)
+[![Idioma: Português](https://img.shields.io/badge/Idioma-Português-green?style=flat-square)](./README_pt_br.md)
 
 This repository presents a development laboratory focused on solving **Technical Debt** and **Setup Friction** challenges within development teams, especially those dealing with legacy systems or shared, volatile infrastructure.
 

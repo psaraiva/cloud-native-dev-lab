@@ -1,6 +1,6 @@
 # 🛡️ Combatendo a Dívida Técnica: Setup Imediato e Produtividade com Dev Containers em Go"
 
-[![Bandeira dos Estados Unidos](https://raw.githubusercontent.com/hatemhosny/country-flags/master/png/United-States.png)](./README.md)
+[![Language: English](https://img.shields.io/badge/Idioma-English-blue?style=flat-square)](./README.md)
 
 Este repositório apresenta um Laboratório de Desenvolvimento focado em resolver problemas de **Dívida Técnica** e **Fricção de Setup** no time de desenvolvimento, especialmente em ambientes legados ou com infraestrutura compartilhada.
 
